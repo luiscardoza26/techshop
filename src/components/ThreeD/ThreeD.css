@@ -1,0 +1,320 @@
+.three-d-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.three-d-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  animation: pulse 15s ease-in-out infinite;
+}
+
+.three-d-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.three-d-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, #2196F3, #00BCD4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideInLeft 1s ease-out;
+}
+
+/* Slider styles */
+.models-slider {
+  padding: 20px 50px;
+  margin: 0 -20px;
+  margin-bottom: 60px;
+}
+
+.slick-slide {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.slick-list {
+  margin: 0 -15px;
+  padding: 20px 0;
+}
+
+.model-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+  margin: 10px;
+}
+
+.model-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(33, 150, 243, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.model-preview {
+  height: 300px;
+  position: relative;
+  background: rgba(63, 62, 62, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.model-preview canvas {
+  width: 100% !important;
+  height: 100% !important;
+  touch-action: none;
+  outline: none;
+}
+
+.model-info {
+  padding: 2rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.model-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #2196F3, #00BCD4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.model-info p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.features-list li {
+  color: #666;
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(33, 150, 243, 0.2);
+  transition: all 0.3s ease;
+}
+
+.features-list li:hover {
+  background: rgba(33, 150, 243, 0.1);
+  border-color: rgba(33, 150, 243, 0.3);
+}
+
+.view-3d-btn {
+  background: linear-gradient(45deg, #2196F3, #00BCD4);
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.view-3d-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: 0.5s;
+}
+
+.view-3d-btn:hover::before {
+  left: 100%;
+}
+
+.view-3d-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+}
+
+/* Slider navigation */
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, #2196F3, #00BCD4) !important;
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: linear-gradient(45deg, #00BCD4, #2196F3) !important;
+  width: 45px;
+  height: 45px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 24px;
+  opacity: 1;
+  line-height: 1;
+}
+
+.slick-dots {
+  bottom: -40px;
+}
+
+.slick-dots li {
+  margin: 0 6px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #2196F3;
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #00BCD4;
+  opacity: 1;
+}
+
+/* Make sure arrows are always visible */
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+@media (max-width: 1024px) {
+  .three-d-container h2 {
+    font-size: 2.4rem;
+  }
+
+  .models-slider {
+    padding: 20px 40px;
+  }
+
+  .slick-prev {
+    left: 10px;
+  }
+
+  .slick-next {
+    right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .three-d-section {
+    padding: 60px 0;
+  }
+
+  .three-d-container h2 {
+    font-size: 2rem;
+  }
+
+  .models-slider {
+    padding: 20px 30px;
+  }
+
+  .slick-prev {
+    left: 5px;
+  }
+
+  .slick-next {
+    right: 5px;
+  }
+
+  .model-preview {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .three-d-section {
+    padding: 40px 0;
+  }
+
+  .model-preview {
+    height: 200px;
+  }
+
+  .model-info {
+    padding: 1.2rem;
+  }
+
+  .view-3d-btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

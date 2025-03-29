@@ -1,0 +1,22 @@
+:root {
+  /* Primary Colors */
+  --primary-dark: #0B1437;
+  --primary-light: #2196F3;
+  --accent-blue: #00BCD4;
+  --accent-purple: #7C3AED;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #0B1437 0%, #1E293B 100%);
+  --gradient-accent: linear-gradient(45deg, #2196F3, #00BCD4);
+  --gradient-purple: linear-gradient(45deg, #7C3AED, #2196F3);
+  
+  /* Glass Effects */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  
+  /* Text Colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: #94A3B8;
+  --text-accent: #2196F3;
+}

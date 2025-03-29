@@ -1,0 +1,146 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  background: transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+}
+
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 15px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.header.scrolled .logo {
+  transform: scale(0.95);
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+nav ul li {
+  margin-left: 30px;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+nav ul li:hover {
+  transform: translateY(-1px);
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+  text-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.15);
+  background: rgba(0, 123, 255, 0.05);
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, transparent, #007bff, transparent);
+  transition: width 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 15px 0;
+  }
+
+  nav ul li {
+    margin-left: 20px;
+  }
+
+  .logo-image {
+    display: none;
+  }
+
+  nav ul li a::after {
+    height: 1.5px;
+  }
+
+  nav ul li a:hover {
+    text-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
+  }
+}
+
+@media (max-width: 600px) {
+  nav ul li {
+    margin-left: 15px;
+  }
+
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  nav ul li a {
+    padding: 5px 8px;
+  }
+}
