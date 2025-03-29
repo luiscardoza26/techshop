@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { CardMedia } from '@mui/material';
 import Slider from 'react-slick';
@@ -8,7 +8,7 @@ import './Products.css';
 import { products } from '../../data/products';
 
 const Products = () => {
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  // const [selectedProduct, setSelectedProduct] = useState(null);
 
   const settings = {
     dots: true,
@@ -79,7 +79,7 @@ const Products = () => {
               key={product.id}
               className="product-card"
               variants={productVariants}
-              onClick={() => setSelectedProduct(product)}
+              // onClick={() => setSelectedProduct(product)}
             >
               <div className="product-image">
                 <motion.div

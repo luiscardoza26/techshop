@@ -11,10 +11,10 @@ const Footer = () => {
           <h3>TechStore</h3>
           <p>Tu destino para la mejor tecnología</p>
           <div className="social-links">
-            <a href="#" className="social-link"><FaFacebook /></a>
-            <a href="#" className="social-link"><FaTwitter /></a>
-            <a href="#" className="social-link"><FaInstagram /></a>
-            <a href="#" className="social-link"><FaLinkedin /></a>
+            <a href="." className="social-link"><FaFacebook /></a>
+            <a href="." className="social-link"><FaTwitter /></a>
+            <a href="." className="social-link"><FaInstagram /></a>
+            <a href="." className="social-link"><FaLinkedin /></a>
           </div>
         </div>
 
@@ -51,8 +51,8 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>&copy; 2024 TechStore. Todos los derechos reservados.</p>
         <div className="footer-links">
-          <a href="#">Política de Privacidad</a>
-          <a href="#">Términos y Condiciones</a>
+          <a href=".">Política de Privacidad</a>
+          <a href=".">Términos y Condiciones</a>
         </div>
       </div>
     </footer>
